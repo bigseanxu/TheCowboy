@@ -26,4 +26,5 @@ public class ElementMovement : MonoBehaviour {
 		transform.position = vec;
 		StartTween ();
 	}
+
 }
