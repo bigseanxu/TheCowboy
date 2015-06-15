@@ -9,7 +9,7 @@ public class Main : MonoBehaviour {
 	public bool b=false;
 	public void OnSettingBtnClick(Transform a){
 		Vector3 vec = a.transform.position;
-		if (!b) {
+		if (!b) { 
 
 			vec.x += 68f;
 			print (vec);
