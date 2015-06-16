@@ -16,7 +16,7 @@ public class ElementMovement : MonoBehaviour {
 	public void StartTween() {
 		Vector3 vec = transform.position;
 		vec.x -= 800;
-		LTDescr des = LeanTween.move (gameObject, vec, 32).setOnComplete(TweenOnComplete);
+		LTDescr des = LeanTween.move (gameObject, vec, 42).setOnComplete(TweenOnComplete);
 
 	}
 

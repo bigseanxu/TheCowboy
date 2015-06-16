@@ -44,6 +44,7 @@ public class Main : MonoBehaviour {
 	}
 	public void PlayGame(){
 		print ("开始游戏");
+		//t.transform.GetComponent<Rigidbody> ().AddForce (Vector3.forward * 100000);
 	}
 	public void ShowGameCenter(){
 		print ("打开游戏中心");
