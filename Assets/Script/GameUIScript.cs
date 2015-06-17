@@ -10,6 +10,7 @@ public class GameUIScript : MonoBehaviour {
 	public Transform pause;
 	public Transform stop;
 	public Transform died;
+	public bool isDied=false;
 	// Update is called once per frame
 
 	public void OnStopButtonClick(){
@@ -51,6 +52,10 @@ public class GameUIScript : MonoBehaviour {
 
 		//twitter
 	}
-
+	public void CheckDiedOrAlive(){
+		if (isDied) {
+			died.gameObject.SetActive (true);
+		}
+	}
 
 }

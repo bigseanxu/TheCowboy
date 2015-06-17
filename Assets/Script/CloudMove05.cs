@@ -11,7 +11,7 @@ public class CloudMove05 : MonoBehaviour {
 	// Update is called once per frame
 	public void StartTween() {
 		Vector3 vec = transform.position;
-		vec.x += 400;
+		vec.x += 300;
 
 		LTDescr des = LeanTween.move (gameObject, vec, 16).setOnComplete(TweenOnComplete1);
 		
@@ -19,13 +19,13 @@ public class CloudMove05 : MonoBehaviour {
 	
 	void TweenOnComplete() {
 		Vector3 vec = transform.position;
-		vec.x += 800;
+		vec.x += 600;
 
 		LTDescr des = LeanTween.move (gameObject, vec, 32).setOnComplete(TweenOnComplete1);
 	}
 	void TweenOnComplete1() {
 		Vector3 vec = transform.position;
-		vec.x -= 800;
+		vec.x -= 600;
 
 		transform.position = vec;
 		TweenOnComplete ();
