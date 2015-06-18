@@ -474,7 +474,7 @@ GameObject:
   - 224: {fileID: 477883846}
   - 222: {fileID: 477883849}
   - 114: {fileID: 477883848}
-  - 114: {fileID: 477883847}
+  - 114: {fileID: 477883850}
   m_Layer: 5
   m_Name: Cloud02
   m_TagString: Untagged
@@ -499,17 +499,6 @@ RectTransform:
   m_AnchoredPosition: {x: 950, y: 310}
   m_SizeDelta: {x: 540, y: 80}
   m_Pivot: {x: .5, y: .5}
---- !u!114 &477883847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 477883845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08c812d182323384fac555c0608fab4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &477883848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,6 +526,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 477883845}
+--- !u!114 &477883850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 477883845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c066a3fa16e34564fa7102b705aac7d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveX: -700
+  moveXFirst: -700
+  moveY: 0
+  moveYFirst: 0
+  moveTime: 75
+  moveTimeFirstAni: 75
 --- !u!1 &481299130
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,7 +555,7 @@ GameObject:
   - 114: {fileID: 481299134}
   - 111: {fileID: 481299133}
   - 95: {fileID: 481299132}
-  - 114: {fileID: 481299136}
+  - 114: {fileID: 481299137}
   m_Layer: 5
   m_Name: Bird2
   m_TagString: Untagged
@@ -633,7 +639,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 481299130}
---- !u!114 &481299136
+--- !u!114 &481299137
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -641,9 +647,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 481299130}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4845d704167751945b2c1d0997e711b7, type: 3}
+  m_Script: {fileID: 11500000, guid: c066a3fa16e34564fa7102b705aac7d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveX: 500
+  moveXFirst: 250
+  moveY: 80
+  moveYFirst: 40
+  moveTime: 110
+  moveTimeFirstAni: 55
 --- !u!1 &518786517
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,7 +874,7 @@ GameObject:
   - 224: {fileID: 657879846}
   - 222: {fileID: 657879848}
   - 114: {fileID: 657879847}
-  - 114: {fileID: 657879849}
+  - 114: {fileID: 657879850}
   m_Layer: 5
   m_Name: Cloud01
   m_TagString: Untagged
@@ -884,7 +896,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 835, y: 206}
+  m_AnchoredPosition: {x: 832, y: 206}
   m_SizeDelta: {x: 580, y: 120}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &657879847
@@ -914,7 +926,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 657879845}
---- !u!114 &657879849
+--- !u!114 &657879850
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -922,9 +934,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 657879845}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2fc161ca6dddcc4b9e9cf778684956c, type: 3}
+  m_Script: {fileID: 11500000, guid: c066a3fa16e34564fa7102b705aac7d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveX: -700
+  moveXFirst: -700
+  moveY: 0
+  moveYFirst: 0
+  moveTime: 40
+  moveTimeFirstAni: 40
 --- !u!1 &708329103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1377,6 +1395,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c066a3fa16e34564fa7102b705aac7d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveX: 500
+  moveXFirst: 250
+  moveY: 80
+  moveYFirst: 40
+  moveTime: 120
+  moveTimeFirstAni: 60
 --- !u!1 &1077590919
 GameObject:
   m_ObjectHideFlags: 0
@@ -2096,6 +2120,8 @@ GameObject:
   - 222: {fileID: 1491616938}
   - 114: {fileID: 1491616937}
   - 114: {fileID: 1491616939}
+  - 225: {fileID: 1491616940}
+  - 114: {fileID: 1491616941}
   m_Layer: 5
   m_Name: SettingUI
   m_TagString: Untagged
@@ -2160,6 +2186,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d86bd405d1facf3498da0de55215b42a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!225 &1491616940
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1491616935}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 1
+--- !u!114 &1491616941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1491616935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 0
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: .960784316, g: .960784316, b: .960784316, a: 1}
+    m_PressedColor: {r: .784313738, g: .784313738, b: .784313738, a: 1}
+    m_DisabledColor: {r: .784313738, g: .784313738, b: .784313738, a: .501960814}
+    m_ColorMultiplier: 1
+    m_FadeDuration: .100000001
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1491616937}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1498153672
 GameObject:
   m_ObjectHideFlags: 0
@@ -2574,9 +2652,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1814041861}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 828e6365943962e48ba5ee5726f9b236, type: 3}
+  m_Script: {fileID: 11500000, guid: c066a3fa16e34564fa7102b705aac7d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveX: 500
+  moveXFirst: 250
+  moveY: 80
+  moveYFirst: 40
+  moveTime: 140
+  moveTimeFirstAni: 70
 --- !u!1 &1875854283
 GameObject:
   m_ObjectHideFlags: 0

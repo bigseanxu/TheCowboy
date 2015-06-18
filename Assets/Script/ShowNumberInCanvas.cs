@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 
 public class ShowNumberInCanvas : MonoBehaviour {
-
+	public string NumberName="Number";
 	public Sprite [] sprites = new Sprite[10];
 	public int numberInsp = 0;
 	int num;
@@ -64,7 +64,7 @@ public class ShowNumberInCanvas : MonoBehaviour {
 
 	void GenerateImageNumber(int n) {
 		for (int i = 0; i < n; i++) {
-			GameObject number = (GameObject) Instantiate ((GameObject) Resources.Load ("Number"), new Vector3 (), new Quaternion());
+			GameObject number = (GameObject) Instantiate ((GameObject) Resources.Load (NumberName), new Vector3 (), new Quaternion());
 			number.transform.SetParent(position);
 
 			// Fixme: after setparent to a canvas, anchored position and scale will change.
