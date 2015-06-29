@@ -1627,6 +1627,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 298208903}
   - 95: {fileID: 298208904}
+  - 114: {fileID: 298208905}
   m_Layer: 5
   m_Name: Cowboy01
   m_TagString: Untagged
@@ -1673,6 +1674,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &298208905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 298208902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecd5ae2e3fb47242b53be75429d28f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateNum: 1
+  cowboy: {fileID: 298208903}
+  cowboyAniNum: 01
 --- !u!1 &316236807
 GameObject:
   m_ObjectHideFlags: 0
@@ -2265,7 +2280,7 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 830, y: 244}
+  m_AnchoredPosition: {x: 839, y: 274}
   m_SizeDelta: {x: 580, y: 120}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &430701376
@@ -3511,7 +3526,7 @@ RectTransform:
   m_RootOrder: 7
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 940, y: 366}
+  m_AnchoredPosition: {x: 940, y: 387}
   m_SizeDelta: {x: 540, y: 80}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &446277087
@@ -7563,6 +7578,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 729061886}
   - 95: {fileID: 729061887}
+  - 114: {fileID: 729061888}
   m_Layer: 5
   m_Name: Cowboy05
   m_TagString: Untagged
@@ -7609,6 +7625,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &729061888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 729061885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecd5ae2e3fb47242b53be75429d28f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateNum: 1
+  cowboy: {fileID: 729061886}
+  cowboyAniNum: 05
 --- !u!1 &737728167
 GameObject:
   m_ObjectHideFlags: 0
@@ -9840,6 +9870,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 1036040470}
   - 95: {fileID: 1036040471}
+  - 114: {fileID: 1036040472}
   m_Layer: 5
   m_Name: Cowboy06
   m_TagString: Untagged
@@ -9885,6 +9916,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1036040472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1036040469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecd5ae2e3fb47242b53be75429d28f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateNum: 2
+  cowboy: {fileID: 1036040470}
+  cowboyAniNum: 06
 --- !u!1 &1073200351
 GameObject:
   m_ObjectHideFlags: 0
@@ -11567,6 +11612,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 1264287193}
   - 95: {fileID: 1264287194}
+  - 114: {fileID: 1264287195}
   m_Layer: 5
   m_Name: Cowboy04
   m_TagString: Untagged
@@ -11613,6 +11659,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1264287195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1264287192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecd5ae2e3fb47242b53be75429d28f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateNum: 1
+  cowboy: {fileID: 1264287193}
+  cowboyAniNum: 04
 --- !u!1 &1271721852
 GameObject:
   m_ObjectHideFlags: 0
@@ -12214,6 +12274,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 1398379507}
   - 95: {fileID: 1398379508}
+  - 114: {fileID: 1398379509}
   m_Layer: 5
   m_Name: Cowboy02
   m_TagString: Untagged
@@ -12260,6 +12321,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1398379509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1398379506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecd5ae2e3fb47242b53be75429d28f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateNum: 1
+  cowboy: {fileID: 1398379507}
+  cowboyAniNum: 02
 --- !u!1 &1408200222
 GameObject:
   m_ObjectHideFlags: 0
@@ -12483,7 +12558,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1417717821
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15975,6 +16050,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 1670326436}
   - 95: {fileID: 1670326437}
+  - 114: {fileID: 1670326438}
   m_Layer: 5
   m_Name: Cowboy03
   m_TagString: Untagged
@@ -16021,6 +16097,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1670326438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1670326435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecd5ae2e3fb47242b53be75429d28f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateNum: 1
+  cowboy: {fileID: 1670326436}
+  cowboyAniNum: 03
 --- !u!1 &1677397795
 GameObject:
   m_ObjectHideFlags: 0
