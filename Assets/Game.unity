@@ -1687,7 +1687,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateNum: 1
   cowboy: {fileID: 298208903}
+  died: {fileID: 1906823560}
+  angryNum: 0
+  isActive: 0
+  isScreen06: 0
+  isScreen01: 1
   cowboyAniNum: 01
+  addAngryNumWhenUpdate: .100000001
+  minusAngryNumWhenUpdate: .0399999991
+  diedMenuShowDelay: 1.79999995
+  animationSpeed: .5
+  relaxMin: 0
+  relaxMax: 30
+  drop: 38
+  normalMax: 65
+  impatientMax: 90
+  angryMax: 100
 --- !u!1 &316236807
 GameObject:
   m_ObjectHideFlags: 0
@@ -7638,7 +7653,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateNum: 1
   cowboy: {fileID: 729061886}
+  died: {fileID: 1906823560}
+  angryNum: 0
+  isActive: 0
+  isScreen06: 0
+  isScreen01: 0
   cowboyAniNum: 05
+  addAngryNumWhenUpdate: .100000001
+  minusAngryNumWhenUpdate: .0399999991
+  diedMenuShowDelay: 1.79999995
+  animationSpeed: .5
+  relaxMin: 0
+  relaxMax: 30
+  drop: 38
+  normalMax: 65
+  impatientMax: 90
+  angryMax: 100
 --- !u!1 &737728167
 GameObject:
   m_ObjectHideFlags: 0
@@ -9929,7 +9959,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateNum: 2
   cowboy: {fileID: 1036040470}
+  died: {fileID: 1906823560}
+  angryNum: 0
+  isActive: 0
+  isScreen06: 1
+  isScreen01: 0
   cowboyAniNum: 06
+  addAngryNumWhenUpdate: .100000001
+  minusAngryNumWhenUpdate: .0399999991
+  diedMenuShowDelay: 1.79999995
+  animationSpeed: .5
+  relaxMin: 0
+  relaxMax: 30
+  drop: 38
+  normalMax: 65
+  impatientMax: 90
+  angryMax: 100
 --- !u!1 &1073200351
 GameObject:
   m_ObjectHideFlags: 0
@@ -11672,7 +11717,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateNum: 1
   cowboy: {fileID: 1264287193}
+  died: {fileID: 1906823560}
+  angryNum: 0
+  isActive: 0
+  isScreen06: 0
+  isScreen01: 0
   cowboyAniNum: 04
+  addAngryNumWhenUpdate: .100000001
+  minusAngryNumWhenUpdate: .0399999991
+  diedMenuShowDelay: 1.79999995
+  animationSpeed: .5
+  relaxMin: 0
+  relaxMax: 30
+  drop: 38
+  normalMax: 65
+  impatientMax: 90
+  angryMax: 100
 --- !u!1 &1271721852
 GameObject:
   m_ObjectHideFlags: 0
@@ -12334,7 +12394,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateNum: 1
   cowboy: {fileID: 1398379507}
+  died: {fileID: 1906823560}
+  angryNum: 0
+  isActive: 0
+  isScreen06: 0
+  isScreen01: 0
   cowboyAniNum: 02
+  addAngryNumWhenUpdate: .100000001
+  minusAngryNumWhenUpdate: .0399999991
+  diedMenuShowDelay: 1.79999995
+  animationSpeed: .5
+  relaxMin: 0
+  relaxMax: 30
+  drop: 38
+  normalMax: 65
+  impatientMax: 90
+  angryMax: 100
 --- !u!1 &1408200222
 GameObject:
   m_ObjectHideFlags: 0
@@ -12558,7 +12633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1417717821
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14381,7 +14456,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1590120031
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16110,7 +16185,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateNum: 1
   cowboy: {fileID: 1670326436}
+  died: {fileID: 1906823560}
+  angryNum: 0
+  isActive: 0
+  isScreen06: 0
+  isScreen01: 0
   cowboyAniNum: 03
+  addAngryNumWhenUpdate: .100000001
+  minusAngryNumWhenUpdate: .0399999991
+  diedMenuShowDelay: 1.79999995
+  animationSpeed: .5
+  relaxMin: 0
+  relaxMax: 30
+  drop: 38
+  normalMax: 65
+  impatientMax: 90
+  angryMax: 100
 --- !u!1 &1677397795
 GameObject:
   m_ObjectHideFlags: 0

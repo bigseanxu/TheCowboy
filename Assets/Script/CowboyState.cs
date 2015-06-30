@@ -12,11 +12,35 @@ public class CowboyState : MonoBehaviour {
 	 * 11=烟头掉下来      11%-50%
 	 */
 	public int stateNum=1;
-	public Transform cowboy;//
+	public Transform cowboy;
+	public Transform died;
+	public float angryNum=0f;////此项可以直接赋值
+	public bool isActive=false;//此项可调
+	public bool isScreen06=false;//此项固定
+	public bool isScreen01=false;//此项固定
 	public string cowboyAniNum="01";//此处必须填写01到06,不能省略数字0.
-	//public float animationSpeed=0.5f;
+	//以下为可调项
+	public float addAngryNumWhenUpdate=0.1f;
+	public float minusAngryNumWhenUpdate=0.04f;
+	public float diedMenuShowDelay=1.8f;
+	public float animationSpeed=0.5f;
+	public float relaxMin=0;
+	public float relaxMax=30;
+	public float drop=38;
+	public float normalMax=65;
+	public float impatientMax=90;
+	public float angryMax=100;
+
 	void Update () {
 		Animator ani=cowboy.GetComponent<Animator>();
+		ani.speed = animationSpeed;
+		if (isActive) {
+			angryNum += addAngryNumWhenUpdate;
+		} else {
+			angryNum -= minusAngryNumWhenUpdate;
+		}
+		AngryStateMapping ();
+		//print (angryNum);
 		if (stateNum == 1) {
 			//本状态不支持Screen06,因为6号场景没有relax状态.强制赋值不影响游戏,但控制台会报错.
 			ani.Play("relax"+cowboyAniNum);
@@ -32,10 +56,42 @@ public class CowboyState : MonoBehaviour {
 		}
 		if (stateNum == 5) {
 			ani.Play("Fire"+cowboyAniNum);
+			Invoke("WhenDied",diedMenuShowDelay);
+			
 		}
 		if (stateNum == 11) {
 			//本状态不支持Screen02到Screen06
 			ani.Play("drop");
 		}
+	}
+	void AngryStateMapping(){
+		if (angryNum < relaxMin) {
+			angryNum=relaxMin;
+		}
+		if (angryNum < relaxMax) {
+			if (isScreen06) {
+				stateNum = 2;
+				angryNum = relaxMax;
+			} else {
+				stateNum = 1;
+			}
+		} else if (angryNum < drop) {
+			if (isScreen01) {
+				stateNum = 11;
+			}
+		} else if (angryNum < normalMax) {
+			stateNum = 2;
+		} else if (angryNum < impatientMax) {
+			stateNum = 3;
+		} else if (angryNum <angryMax) {
+			stateNum = 4;
+		} else if(angryNum >=angryMax){
+			stateNum = 5;
+		}
+	}
+	void WhenDied(){
+		died.gameObject.SetActive(true);
+		Animator die=died.GetComponent<Animator>();
+		die.Play("died");
 	}
 }
