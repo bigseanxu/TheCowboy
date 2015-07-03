@@ -31,6 +31,10 @@ public class CowboyState : MonoBehaviour {
 	public float impatientMax=90;
 	public float angryMax=100;
 
+	void Start() {
+
+	}
+
 	void Update () {
 		Animator ani=cowboy.GetComponent<Animator>();
 		ani.speed = animationSpeed;
@@ -44,22 +48,17 @@ public class CowboyState : MonoBehaviour {
 		if (stateNum == 1) {
 			//本状态不支持Screen06,因为6号场景没有relax状态.强制赋值不影响游戏,但控制台会报错.
 			ani.Play("relax"+cowboyAniNum);
-		}
-		if (stateNum == 2) {
-			ani.Play("fightNormal"+cowboyAniNum);
-		}
-		if (stateNum == 3) {
+		} else if (stateNum == 2) {
+			ani.Play("fightNormal"+cowboyAniNum); 
+		} else if (stateNum == 3) {
 			ani.Play("fightImpatient"+cowboyAniNum);
-		}
-		if (stateNum == 4) {
+		} else if (stateNum == 4) {
 			ani.Play("fightAngry"+cowboyAniNum);
-		}
-		if (stateNum == 5) {
+		} else if (stateNum == 5) {
 			ani.Play("Fire"+cowboyAniNum);
 			Invoke("WhenDied",diedMenuShowDelay);
 			
-		}
-		if (stateNum == 11) {
+		} else if (stateNum == 11) {
 			//本状态不支持Screen02到Screen06
 			ani.Play("drop");
 		}

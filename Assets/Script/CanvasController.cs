@@ -33,9 +33,9 @@ public class CanvasController : MonoBehaviour {
 		} else if (dir == MoveDirection.Right) {
 			LeanTween.move(mLayers, new Vector2(mLayerWidth, 0), mMoveTime).setOnComplete(OnTweenComplete);
 		} else if (dir == MoveDirection.Up) {
-			LeanTween.move(mLayers, new Vector2(0, -mLayerHeight), mMoveTime).setOnComplete(OnTweenComplete);
-		} else if (dir == MoveDirection.Down) {
 			LeanTween.move(mLayers, new Vector2(0, mLayerHeight), mMoveTime).setOnComplete(OnTweenComplete);
+		} else if (dir == MoveDirection.Down) {
+			LeanTween.move(mLayers, new Vector2(0, -mLayerHeight), mMoveTime).setOnComplete(OnTweenComplete);
 		} else {
 			// do nothing
 		}

@@ -22,8 +22,8 @@ public class CubeIndicator : MonoBehaviour {
 		normals [0] = new Vector3 (0, 0, 1);
 		normals [1] = new Vector3 (-1, 0, 0);
 		normals [2] = new Vector3 (1, 0, 0);
-		normals [3] = new Vector3 (0, 1, 0);
-		normals [4] = new Vector3 (0, -1, 0);
+		normals [3] = new Vector3 (0, -1, 0);
+		normals [4] = new Vector3 (0, 1, 0);
 		normals [5] = new Vector3 (0, 0, -1);
 	}
 
