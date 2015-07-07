@@ -12,7 +12,7 @@ public class SettingInit : MonoBehaviour {
 		Vector3 screenpos = Camera.main.ScreenToViewportPoint (transform.position);
 		//print (screenpos);
 		vec.x -= moveX;
-		LeanTween.move (gameObject, vec, moveXTime);
+		LeanTween.move ((RectTransform)transform, vec, moveXTime);
 		//print (Screen.width);
 
 

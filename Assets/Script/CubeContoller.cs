@@ -62,7 +62,7 @@ public class CubeContoller : MonoBehaviour {
 
 	public void Rotate90WithTween(RotateDirection dir) {
 		isRotating = true;
-		LeanTween.cancelAll (false);
+		//LeanTween.cancelAll (false);
 		//LeanTween.reset ();
 		//LeanTween.pauseAll();
 
@@ -114,17 +114,17 @@ public class CubeContoller : MonoBehaviour {
 		for (int i = 0; i < 6; i++) {
 			if ((int)screen == i) {
 				things [i].gameObject.SetActive (true);
-				things[i].GetComponentInChildren<AudioSource>().volume=0.8f;
-				Movement[] movs=things[i].GetComponentsInChildren<Movement>();
-				foreach(Movement mov in movs){
-					mov.StartTween();
-				}
+				//things[i].GetComponentInChildren<AudioSource>().volume=0.8f;
+				//Movement[] movs=things[i].GetComponentsInChildren<Movement>();
+				//foreach(Movement mov in movs){
+				//	mov.StartTween();
+				//}
 			} else {
 				things [i].gameObject.SetActive (false);
-				Movement[] movs=things[i].GetComponentsInChildren<Movement>();
-				foreach(Movement mov in movs){
-					mov.StopTween();
-				}
+				//Movement[] movs=things[i].GetComponentsInChildren<Movement>();
+				//foreach(Movement mov in movs){
+				//	mov.StopTween();
+				//}
 			
 				//CheckRotate();
 			}

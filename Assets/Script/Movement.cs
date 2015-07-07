@@ -33,7 +33,7 @@ public class Movement : MonoBehaviour {
 		//StartCoroutine(Test());
 
 		if (isfirsttime) {
-			vec = transform.position;
+			vec = ((RectTransform)transform).anchoredPosition3D;
 			vec2 = vec;
 			isfirsttime = false;
 		} else {
@@ -44,9 +44,9 @@ public class Movement : MonoBehaviour {
 		vec.y += moveYFirst;
 	//	vec.z += moveZFirst;
 		if (isLoopFirst) {
-			 des = LeanTween.move(gameObject, vec, moveTimeFirstAni).setOnComplete (TweenOnComplete1);
+			des = LeanTween.move((RectTransform)transform, vec, moveTimeFirstAni).setLoopPingPong();
 		} else {
-			LeanTween.move (gameObject, vec, moveTimeFirstAni);
+			LeanTween.move ((RectTransform)transform, vec, moveTimeFirstAni);
 		}
 		
 	}
@@ -59,16 +59,16 @@ public class Movement : MonoBehaviour {
 		vec.x += moveX;
 		vec.y += moveY;
 	//	vec.z += moveZ;
-		des = LeanTween.move (gameObject, vec, moveTime).setOnComplete(TweenOnComplete1);
+		des = LeanTween.move ((RectTransform)transform, vec, moveTime).setOnComplete(TweenOnComplete1);
 
 	}
 	void TweenOnComplete1() {
 		//Test ();
-		Vector3 vec = transform.position;
+		Vector3 vec = vec2;
 		vec.x -= moveX;
 		vec.y -= moveY;
 	//	vec.z -= moveZ;
-		transform.position = vec;
+		((RectTransform)transform).anchoredPosition3D = vec;
 		TweenOnComplete ();
 	}
 	public IEnumerator Test(){

@@ -1461,10 +1461,10 @@ MonoBehaviour:
   - {fileID: 1302086157}
   - {fileID: 1024085037}
   - {fileID: 1417717821}
-  moveX: 40
-  moveXFirst: 20
-  moveY: 7
-  moveYFirst: 3.5
+  moveX: 400
+  moveXFirst: 200
+  moveY: 70
+  moveYFirst: 35
   moveTime: 110
   moveTimeFirstAni: 55
   isLoopFirst: 1
@@ -2079,10 +2079,10 @@ MonoBehaviour:
   - {fileID: 1302086157}
   - {fileID: 1024085037}
   - {fileID: 1417717821}
-  moveX: 70
-  moveXFirst: 35
-  moveY: 87
-  moveYFirst: 43.5
+  moveX: 1700
+  moveXFirst: 850
+  moveY: 0
+  moveYFirst: 0
   moveTime: 100
   moveTimeFirstAni: 50
   isLoopFirst: 1
@@ -2531,12 +2531,12 @@ MonoBehaviour:
   - {fileID: 1302086157}
   - {fileID: 1024085037}
   - {fileID: 1417717821}
-  moveX: -650
-  moveXFirst: -650
+  moveX: -6500
+  moveXFirst: -6500
   moveY: 0
   moveYFirst: 0
-  moveTime: 26
-  moveTimeFirstAni: 26
+  moveTime: 10
+  moveTimeFirstAni: 10
   isLoopFirst: 1
   waitingTime: 0
 --- !u!95 &417870192
@@ -2725,8 +2725,8 @@ MonoBehaviour:
   - {fileID: 1302086157}
   - {fileID: 1024085037}
   - {fileID: 1417717821}
-  moveX: -70
-  moveXFirst: -70
+  moveX: -1000
+  moveXFirst: -1000
   moveY: 0
   moveYFirst: 0
   moveTime: 50
@@ -3879,7 +3879,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &440016259
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3992,8 +3992,8 @@ MonoBehaviour:
   - {fileID: 1302086157}
   - {fileID: 1024085037}
   - {fileID: 1417717821}
-  moveX: -70
-  moveXFirst: -70
+  moveX: -1000
+  moveXFirst: -1000
   moveY: 0
   moveYFirst: 0
   moveTime: 75
@@ -4054,8 +4054,8 @@ MonoBehaviour:
   - {fileID: 1302086157}
   - {fileID: 1024085037}
   - {fileID: 1417717821}
-  moveX: -100
-  moveXFirst: -50
+  moveX: -1000
+  moveXFirst: -500
   moveY: 0
   moveYFirst: 0
   moveTime: 90
@@ -5637,7 +5637,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -337, y: -211}
+  m_AnchoredPosition: {x: -337, y: -252}
   m_SizeDelta: {x: 50, y: 40}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &587275697
@@ -5690,7 +5690,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 587275695}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c066a3fa16e34564fa7102b705aac7d0, type: 3}
   m_Name: 
@@ -5706,7 +5706,7 @@ MonoBehaviour:
   moveX: 0
   moveXFirst: 0
   moveY: 0
-  moveYFirst: 0
+  moveYFirst: 40
   moveTime: 0
   moveTimeFirstAni: .300000012
   isLoopFirst: 0
@@ -7468,12 +7468,12 @@ MonoBehaviour:
   - {fileID: 1302086157}
   - {fileID: 1024085037}
   - {fileID: 1417717821}
-  moveX: -650
-  moveXFirst: -650
+  moveX: -6500
+  moveXFirst: -6500
   moveY: 0
   moveYFirst: 0
-  moveTime: 26
-  moveTimeFirstAni: 26
+  moveTime: 10
+  moveTimeFirstAni: 10
   isLoopFirst: 1
   waitingTime: 0
 --- !u!95 &656988460
@@ -7911,10 +7911,10 @@ MonoBehaviour:
   - {fileID: 1302086157}
   - {fileID: 1024085037}
   - {fileID: 1417717821}
-  moveX: 50
-  moveXFirst: 25
-  moveY: 8
-  moveYFirst: 4
+  moveX: 500
+  moveXFirst: 250
+  moveY: 80
+  moveYFirst: 40
   moveTime: 140
   moveTimeFirstAni: 70
   isLoopFirst: 1
@@ -8184,10 +8184,10 @@ MonoBehaviour:
   - {fileID: 1302086157}
   - {fileID: 1024085037}
   - {fileID: 1417717821}
-  moveX: 50
-  moveXFirst: 25
-  moveY: 8
-  moveYFirst: 4
+  moveX: 500
+  moveXFirst: 250
+  moveY: 80
+  moveYFirst: 40
   moveTime: 110
   moveTimeFirstAni: 55
   isLoopFirst: 1
@@ -9071,12 +9071,12 @@ MonoBehaviour:
   - {fileID: 1302086157}
   - {fileID: 1024085037}
   - {fileID: 1417717821}
-  moveX: -650
-  moveXFirst: -650
+  moveX: -6500
+  moveXFirst: -6500
   moveY: 0
   moveYFirst: 0
-  moveTime: 26
-  moveTimeFirstAni: 26
+  moveTime: 10
+  moveTimeFirstAni: 10
   isLoopFirst: 1
   waitingTime: 0
 --- !u!1 &923909176
@@ -10568,7 +10568,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1024085037
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12507,8 +12507,8 @@ MonoBehaviour:
   - {fileID: 1302086157}
   - {fileID: 1024085037}
   - {fileID: 1417717821}
-  moveX: 60
-  moveXFirst: 30
+  moveX: 1000
+  moveXFirst: 500
   moveY: 0
   moveYFirst: 0
   moveTime: 90
@@ -12998,7 +12998,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1302086157
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13539,8 +13539,8 @@ MonoBehaviour:
   - {fileID: 1302086157}
   - {fileID: 1024085037}
   - {fileID: 1417717821}
-  moveX: -60
-  moveXFirst: -30
+  moveX: -1000
+  moveXFirst: -500
   moveY: 0
   moveYFirst: 0
   moveTime: 70
@@ -13926,7 +13926,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1417717821
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14169,8 +14169,8 @@ MonoBehaviour:
   - {fileID: 1302086157}
   - {fileID: 1024085037}
   - {fileID: 1417717821}
-  moveX: 70
-  moveXFirst: 70
+  moveX: 700
+  moveXFirst: 700
   moveY: 0
   moveYFirst: 0
   moveTime: 50
@@ -15712,7 +15712,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1557707628
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18502,10 +18502,10 @@ MonoBehaviour:
   - {fileID: 1302086157}
   - {fileID: 1024085037}
   - {fileID: 1417717821}
-  moveX: 40
-  moveXFirst: 20
-  moveY: 7
-  moveYFirst: 3.5
+  moveX: 400
+  moveXFirst: 200
+  moveY: 70
+  moveYFirst: 35
   moveTime: 120
   moveTimeFirstAni: 60
   isLoopFirst: 1
@@ -19084,7 +19084,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 264, y: -11}
+  m_AnchoredPosition: {x: 264, y: -51}
   m_SizeDelta: {x: 50, y: 40}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1926717844
@@ -19137,7 +19137,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1926717842}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c066a3fa16e34564fa7102b705aac7d0, type: 3}
   m_Name: 
@@ -19153,7 +19153,7 @@ MonoBehaviour:
   moveX: 0
   moveXFirst: 0
   moveY: 0
-  moveYFirst: 0
+  moveYFirst: 40
   moveTime: 0
   moveTimeFirstAni: .300000012
   isLoopFirst: 0
@@ -19254,7 +19254,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 469, y: -241}
+  m_AnchoredPosition: {x: 469, y: -281}
   m_SizeDelta: {x: 50, y: 40}
   m_Pivot: {x: .5, y: .5}
 --- !u!95 &1949658059
@@ -19307,7 +19307,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1949658057}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c066a3fa16e34564fa7102b705aac7d0, type: 3}
   m_Name: 
@@ -19323,7 +19323,7 @@ MonoBehaviour:
   moveX: 0
   moveXFirst: 0
   moveY: 0
-  moveYFirst: 0
+  moveYFirst: 40
   moveTime: 0
   moveTimeFirstAni: .300000012
   isLoopFirst: 0
@@ -20326,10 +20326,10 @@ MonoBehaviour:
   - {fileID: 1302086157}
   - {fileID: 1024085037}
   - {fileID: 1417717821}
-  moveX: 40
-  moveXFirst: 20
-  moveY: 7
-  moveYFirst: 3.5
+  moveX: 400
+  moveXFirst: 200
+  moveY: 70
+  moveYFirst: 35
   moveTime: 140
   moveTimeFirstAni: 70
   isLoopFirst: 1
@@ -20547,8 +20547,8 @@ MonoBehaviour:
   - {fileID: 1302086157}
   - {fileID: 1024085037}
   - {fileID: 1417717821}
-  moveX: 60
-  moveXFirst: 30
+  moveX: 600
+  moveXFirst: 300
   moveY: 0
   moveYFirst: 0
   moveTime: 70
@@ -20637,10 +20637,10 @@ MonoBehaviour:
   - {fileID: 1302086157}
   - {fileID: 1024085037}
   - {fileID: 1417717821}
-  moveX: 50
-  moveXFirst: 25
-  moveY: 8
-  moveYFirst: 4
+  moveX: 500
+  moveXFirst: 250
+  moveY: 80
+  moveYFirst: 40
   moveTime: 120
   moveTimeFirstAni: 60
   isLoopFirst: 1
@@ -20743,8 +20743,8 @@ MonoBehaviour:
   - {fileID: 1302086157}
   - {fileID: 1024085037}
   - {fileID: 1417717821}
-  moveX: 70
-  moveXFirst: 70
+  moveX: 700
+  moveXFirst: 700
   moveY: 0
   moveYFirst: 0
   moveTime: 75

@@ -37,18 +37,19 @@ public class Main : MonoBehaviour {
 
 	public void OnSettingBtnClick(Transform a){
 
-		Vector3 vec = a.transform.position;
+
+		Vector3 vec =((RectTransform)a.transform).anchoredPosition3D;
 		if (!b) { 
 			if(isSoundActivating)
 				AudioSource.PlayClipAtPoint (btnAudio, v3);
-			vec.x += 68f;
+			vec.x += 150f;
 			print (vec);
-			LeanTween.move (a.gameObject, vec, 0.1f).setOnComplete (TweenOnCompleteTrue);
+			LeanTween.move ((RectTransform)a.transform, vec, 0.1f).setOnComplete (TweenOnCompleteTrue);
 		} else {
 
-			vec.x -= 68f;
+			vec.x -= 150f;
 			print (vec);
-			LeanTween.move (a.gameObject, vec, 0.1f).setOnComplete (TweenOnCompleteFalse);
+			LeanTween.move ((RectTransform)a.transform, vec, 0.1f).setOnComplete (TweenOnCompleteFalse);
 		}
 		
 	}

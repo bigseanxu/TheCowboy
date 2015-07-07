@@ -15,6 +15,8 @@ public class GameUIScript : MonoBehaviour {
 	public AudioClip restartAudio;
 	public static bool isMusicActivating=true;
 	public static bool isSoundActivating=true;
+	//public bool isMusicActivating1=false;
+	//public bool isSoundActivating1=false;
 	public Transform[] bgs=new Transform[6];
 
 	//public Main main=new Main();
@@ -29,8 +31,10 @@ public class GameUIScript : MonoBehaviour {
 		} else {
 			foreach (Transform bg in bgs) {
 				bg.GetComponent<AudioSource> ().Stop ();
+
 			}
 		}
+		//print (isMusicActivating1);
 	}
 	public void OnStopButtonClick(){
 		if(isSoundActivating)

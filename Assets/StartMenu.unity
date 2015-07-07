@@ -2392,7 +2392,7 @@ RectTransform:
   m_RootOrder: 7
   m_AnchorMin: {x: 0, y: .5}
   m_AnchorMax: {x: 0, y: .5}
-  m_AnchoredPosition: {x: 75, y: 331}
+  m_AnchoredPosition: {x: -75, y: 331}
   m_SizeDelta: {x: 150, y: 370}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1491616937
@@ -2428,7 +2428,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1491616935}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d86bd405d1facf3498da0de55215b42a, type: 3}
   m_Name: 
@@ -3033,8 +3033,8 @@ MonoBehaviour:
   loading: {fileID: 1179102160}
   bg: {fileID: 1363136212}
   railing: {fileID: 250942539}
-  soundToggle: {fileID: 0}
-  musicToggle: {fileID: 0}
+  soundToggle: {fileID: 518786518}
+  musicToggle: {fileID: 1484627985}
   v3: {x: 0, y: 0, z: 0}
 --- !u!1 &1976710570
 GameObject:
