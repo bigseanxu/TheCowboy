@@ -4,6 +4,8 @@ using System.Collections;
 public class Movement : MonoBehaviour {
 
 	// Use this for initialization
+	public Transform mCubeIndicator;
+	public Transform[] screens=new Transform[6];
 	public float moveX=500;
 	public float moveXFirst=250;
 	public float moveY=80;
@@ -15,6 +17,10 @@ public class Movement : MonoBehaviour {
 	public float moveTimeFirstAni=60;
 	public bool isLoopFirst=true;
 	public float waitingTime=0;
+	public LTDescr des;
+	bool isfirsttime=true;
+	Vector3 vec;
+	Vector3 vec2;
 	//public bool isLoop=true;
 	void Start () {
 		Invoke("StartTween", waitingTime);
@@ -23,27 +29,38 @@ public class Movement : MonoBehaviour {
 	
 	// Update is called once per frame
 
-	void StartTween() {
+	public void StartTween() {
 		//StartCoroutine(Test());
-		Vector3 vec = transform.position;
+
+		if (isfirsttime) {
+			vec = transform.position;
+			vec2 = vec;
+			isfirsttime = false;
+		} else {
+			vec=vec2;
+		}
+		//vec = transform.position;
 		vec.x += moveXFirst;
 		vec.y += moveYFirst;
 	//	vec.z += moveZFirst;
 		if (isLoopFirst) {
-			LTDescr des = LeanTween.move (gameObject, vec, moveTimeFirstAni).setOnComplete (TweenOnComplete1);
+			 des = LeanTween.move(gameObject, vec, moveTimeFirstAni).setOnComplete (TweenOnComplete1);
 		} else {
 			LeanTween.move (gameObject, vec, moveTimeFirstAni);
 		}
 		
 	}
-	
+	public void StopTween(){
+		LeanTween.cancel (gameObject);
+	}
 	void TweenOnComplete() {
 
 		Vector3 vec = transform.position;
 		vec.x += moveX;
 		vec.y += moveY;
 	//	vec.z += moveZ;
-		LTDescr des = LeanTween.move (gameObject, vec, moveTime).setOnComplete(TweenOnComplete1);
+		des = LeanTween.move (gameObject, vec, moveTime).setOnComplete(TweenOnComplete1);
+
 	}
 	void TweenOnComplete1() {
 		//Test ();
@@ -58,5 +75,15 @@ public class Movement : MonoBehaviour {
 		yield return new WaitForSeconds(waitingTime);//等待x秒
 
 	}
+
+	public void EnableAnimation() {
+		des.toggle = true;
+	}
+
+	public void DisableAnimation() {
+		des.toggle = false;
+	}
+
+
 
 }

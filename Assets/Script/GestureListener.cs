@@ -2,9 +2,11 @@
 using System.Collections;
 
 public class GestureListener : MonoBehaviour {
-
+	public Transform[] things = new Transform[6];
+	Movement[] movs;
 	public Transform cube;
 	public Transform mCanvas;
+	public Transform cloud;
 	// Use this for initialization
 	void Start () {
 	
@@ -35,5 +37,10 @@ public class GestureListener : MonoBehaviour {
 		} else {
 			// do nothing
 		}
+
 	}
+
+	//void OnTap(TapGesture gesture) {
+	//	cloud.GetComponent<Movement> ().des.toggle = !cloud.GetComponent<Movement> ().des.toggle;
+	//}
 }

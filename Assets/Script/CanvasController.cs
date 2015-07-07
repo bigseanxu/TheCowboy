@@ -28,7 +28,9 @@ public class CanvasController : MonoBehaviour {
 	}
 
 	public void MoveLayer(MoveDirection dir) {
+		//mLayers.SetSiblingIndex(999);
 		if (dir == MoveDirection.Left) {
+
 			LeanTween.move(mLayers, new Vector2(-mLayerWidth, 0), mMoveTime).setOnComplete(OnTweenComplete);
 		} else if (dir == MoveDirection.Right) {
 			LeanTween.move(mLayers, new Vector2(mLayerWidth, 0), mMoveTime).setOnComplete(OnTweenComplete);
@@ -57,16 +59,22 @@ public class CanvasController : MonoBehaviour {
 		faces [5] = (RectTransform)screens.FindChild ("Screen06");
 
 		Game.GameScreens screen = mCubeIndicator.GetComponent<CubeIndicator> ().GetScreenAfterRotate (Game.CubeFaces.FaceB);
+		//faces [(int)screen].SetSiblingIndex (999);
 		faces [(int)screen].anchoredPosition = new Vector2 (0, 0);
 		screen = mCubeIndicator.GetComponent<CubeIndicator> ().GetScreenAfterRotate (Game.CubeFaces.FaceL);
+
 		faces [(int)screen].anchoredPosition = new Vector2 (-mLayerWidth, 0);
 		screen = mCubeIndicator.GetComponent<CubeIndicator> ().GetScreenAfterRotate (Game.CubeFaces.FaceR);
+	
 		faces [(int)screen].anchoredPosition = new Vector2 (mLayerWidth, 0);
 		screen = mCubeIndicator.GetComponent<CubeIndicator> ().GetScreenAfterRotate (Game.CubeFaces.FaceU);
+
 		faces [(int)screen].anchoredPosition = new Vector2 (0, mLayerHeight);
 		screen = mCubeIndicator.GetComponent<CubeIndicator> ().GetScreenAfterRotate (Game.CubeFaces.FaceD);
+
 		faces [(int)screen].anchoredPosition = new Vector2 (0, -mLayerHeight);
 		screen = mCubeIndicator.GetComponent<CubeIndicator> ().GetScreenAfterRotate (Game.CubeFaces.FaceF);
+
 		faces [(int)screen].anchoredPosition = new Vector2 (mLayerWidth, mLayerHeight);
 	}
 
