@@ -13,14 +13,17 @@ public class GameUIScript : MonoBehaviour {
 	public AudioClip stopAudio;
 	public AudioClip btnAudio;
 	public AudioClip restartAudio;
+	public static bool isMusicActivating=true;
+	public static bool isSoundActivating=true;
 	public Transform[] bgs=new Transform[6];
 
 	//public Main main=new Main();
 	public Vector3 v3=new Vector3(0,0,0);
 
-	 void start(){
-		if (Main.isMusicActivating) {
+	 void Start(){
+		if (isMusicActivating) {
 			foreach (Transform bg in bgs) {
+				if(!bg.GetComponent<AudioSource> ().isPlaying)
 				bg.GetComponent<AudioSource> ().Play ();
 			}
 		} else {
@@ -30,7 +33,7 @@ public class GameUIScript : MonoBehaviour {
 		}
 	}
 	public void OnStopButtonClick(){
-		if(Main.isSoundActivating)
+		if(isSoundActivating)
 		AudioSource.PlayClipAtPoint (stopAudio, v3);
 		pause.gameObject.SetActive (true);
 		stop.gameObject.SetActive (false);
@@ -39,7 +42,7 @@ public class GameUIScript : MonoBehaviour {
 	}
 
 	public void OnContinueButtonClick(){
-		if(Main.isSoundActivating)
+		if(isSoundActivating)
 		AudioSource.PlayClipAtPoint (btnAudio, v3);
 		pause.gameObject.SetActive (false);
 		stop.gameObject.SetActive (true);
@@ -48,7 +51,7 @@ public class GameUIScript : MonoBehaviour {
 
 	}
 	public void OnBackButtonClick(){
-		if(Main.isSoundActivating)
+		if(isSoundActivating)
 		AudioSource.PlayClipAtPoint (btnAudio, v3);
 		pause.gameObject.SetActive (false);
 		stop.gameObject.SetActive (true);
@@ -57,7 +60,7 @@ public class GameUIScript : MonoBehaviour {
 		Time.timeScale = 1;
 	}
 	public void OnRestartButtonClick(){
-		if(Main.isSoundActivating)
+		if(isSoundActivating)
 		AudioSource.PlayClipAtPoint (restartAudio, v3);
 		pause.gameObject.SetActive (false);
 		stop.gameObject.SetActive (true);

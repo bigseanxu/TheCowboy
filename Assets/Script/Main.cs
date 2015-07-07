@@ -28,7 +28,6 @@ public class Main : MonoBehaviour {
 
 		}
 		if (isSoundActivating) {
-
 			railing.GetComponent<AudioSource> ().Play ();
 		} else {
 			if(railing.GetComponent<AudioSource> ().isPlaying)
@@ -94,9 +93,11 @@ public class Main : MonoBehaviour {
 		print (isOff);
 		if (isOff) {
 			isSoundActivating = false;
+			GameUIScript.isSoundActivating=false;
 			railing.GetComponent<AudioSource> ().Stop ();
 		} else {
 			isSoundActivating = true;
+			GameUIScript.isSoundActivating=true;
 			railing.GetComponent<AudioSource> ().Play ();
 		}
 	}
@@ -106,10 +107,12 @@ public class Main : MonoBehaviour {
 		print (isOff);
 		if (isOff) {
 			isMusicActivating = false;
+			GameUIScript.isMusicActivating = false;
 			bg.GetComponent<AudioSource> ().Stop ();
 
 		} else {
 			isMusicActivating = true;
+			GameUIScript.isMusicActivating =true;
 			bg.GetComponent<AudioSource> ().Play ();
 
 		}

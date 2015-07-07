@@ -36,7 +36,8 @@ public class CubeContoller : MonoBehaviour {
 		float cameraZ = (Screen.height / mActualCowboyRect.y * mCubeSize + mCubeSize) / 2.0f;
 		mCamera.transform.position = new Vector3 (0, 0, cameraZ);
 
-		float mCubeOffsetY = mCowboyOffsetY / mScreenRect.y * 2.0f * (cameraZ - 200.0f);
+		float actualCowboyOffset = mCowboyOffsetY /  mScreenRect.y * (mScreenRect.y / mScreenRect.x * Screen.width) ;
+		float mCubeOffsetY = (actualCowboyOffset / Screen.height * 2.0f * (cameraZ - 200.0f));
 		Vector3 newPosition = transform.position;
 		newPosition.y = mCubeOffsetY;
 		transform.position = newPosition;
