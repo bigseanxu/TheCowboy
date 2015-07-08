@@ -109,7 +109,7 @@ public class CubeContoller : MonoBehaviour {
 		isRotating = false;
 	//	CheckRotate();
 		transform.rotation = new Quaternion ();
-		//RepackTheCube ();
+		RepackTheCube ();
 		ShowCowboys ();
 //		 LeanTween ();
 //		l.t
