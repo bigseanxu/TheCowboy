@@ -21,5 +21,33 @@ public static class Game
 		FaceF,
 	};
 
-}
+	// need to save
+	public static int bestScore = 0;
+	public static int musicSwitch = 0;
+	public static int soundSwitch = 0;
 
+	// do not need to save
+	public static int currScore = 0;
+	static bool isInit = false;
+
+	public static void Initialize() {
+		LoadPrefs ();
+		isInit = true;
+	}
+
+	static void LoadPrefs() {
+		bestScore = PlayerPrefs.GetInt ("BestScore", 0);
+		musicSwitch = PlayerPrefs.GetInt ("MusicSwitch", 1);
+		soundSwitch = PlayerPrefs.GetInt ("SoundSwitch", 1);
+	}
+
+	public static bool isGameInit() {
+		return isInit;
+	}
+
+	public static void SavePrefs() {
+		PlayerPrefs.SetInt ("BestScore", bestScore);
+		PlayerPrefs.SetInt ("MusicSwitch", musicSwitch);
+		PlayerPrefs.SetInt ("SoundSwitch", soundSwitch);
+	}
+}
