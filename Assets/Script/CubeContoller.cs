@@ -25,6 +25,8 @@ public class CubeContoller : MonoBehaviour {
 	float mActualCubeSize;
 	bool isRotating = false;
 	Transform [] faces;
+	bool isOn;
+	bool isOnSound;
 	//Movement[] movs;
 	public Transform[] mCowboys = new Transform[6];
 	// Use this for initialization
@@ -53,6 +55,8 @@ public class CubeContoller : MonoBehaviour {
 		faces [5] = transform.FindChild ("FaceF");
 
 		OnTweenComplete ();
+		isOn = AudioSet.isMusicOn;
+		isOnSound = AudioSet.isSoundOn;
 	}
 	
 	// Update is called once per frame
@@ -65,7 +69,7 @@ public class CubeContoller : MonoBehaviour {
 		//LeanTween.cancelAll (false);
 		//LeanTween.reset ();
 		//LeanTween.pauseAll();
-
+		AudioSet.isMusicOn = false;
 		foreach (Transform thing in things) {
 			thing.gameObject.SetActive(true);
 			thing.GetComponentInChildren<AudioSource>().volume=0;
@@ -101,7 +105,7 @@ public class CubeContoller : MonoBehaviour {
 	}
 
 	void OnTweenComplete() {
-
+		AudioSet.isMusicOn = isOn;
 		isRotating = false;
 	//	CheckRotate();
 		transform.rotation = new Quaternion ();

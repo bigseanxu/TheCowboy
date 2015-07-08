@@ -76,13 +76,7 @@ public class Movement : MonoBehaviour {
 
 	}
 
-	public void EnableAnimation() {
-		des.toggle = true;
-	}
 
-	public void DisableAnimation() {
-		des.toggle = false;
-	}
 
 
 

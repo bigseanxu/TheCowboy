@@ -16,8 +16,8 @@ public class Main : MonoBehaviour {
 	public Transform soundToggle;
 	public Transform musicToggle;
 	public Vector3 v3=new Vector3(0,0,0);
-	public static bool isSoundActivating=true;
-	public static bool isMusicActivating=true;
+	public bool isSoundActivating=AudioSet.isSoundOn;
+	public bool isMusicActivating=AudioSet.isMusicOn;
 
 	void Start(){
 		if (isMusicActivating) {
@@ -93,12 +93,14 @@ public class Main : MonoBehaviour {
 			AudioSource.PlayClipAtPoint (btnAudio, v3);
 		print (isOff);
 		if (isOff) {
-			isSoundActivating = false;
-			GameUIScript.isSoundActivating=false;
+			AudioSet.isSoundOn=false;
+
+			isSoundActivating=false;
 			railing.GetComponent<AudioSource> ().Stop ();
 		} else {
-			isSoundActivating = true;
-			GameUIScript.isSoundActivating=true;
+			AudioSet.isSoundOn=true;
+
+			isSoundActivating=true;
 			railing.GetComponent<AudioSource> ().Play ();
 		}
 	}
@@ -107,13 +109,15 @@ public class Main : MonoBehaviour {
 			AudioSource.PlayClipAtPoint (btnAudio, v3);
 		print (isOff);
 		if (isOff) {
+			AudioSet.isMusicOn= false;
+			//GameUIScript.isMusicActivating = false;
 			isMusicActivating = false;
-			GameUIScript.isMusicActivating = false;
 			bg.GetComponent<AudioSource> ().Stop ();
 
 		} else {
-			isMusicActivating = true;
-			GameUIScript.isMusicActivating =true;
+			AudioSet.isMusicOn= true;
+			//GameUIScript.isMusicActivating =true;
+			isMusicActivating =true;
 			bg.GetComponent<AudioSource> ().Play ();
 
 		}

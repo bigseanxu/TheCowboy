@@ -13,8 +13,8 @@ public class GameUIScript : MonoBehaviour {
 	public AudioClip stopAudio;
 	public AudioClip btnAudio;
 	public AudioClip restartAudio;
-	public static bool isMusicActivating=true;
-	public static bool isSoundActivating=true;
+	public bool isMusicActivating=true;
+	public  bool isSoundActivating=true;
 	//public bool isMusicActivating1=false;
 	//public bool isSoundActivating1=false;
 	public Transform[] bgs=new Transform[6];
@@ -23,18 +23,20 @@ public class GameUIScript : MonoBehaviour {
 	public Vector3 v3=new Vector3(0,0,0);
 
 	 void Start(){
-		if (isMusicActivating) {
-			foreach (Transform bg in bgs) {
-				if(!bg.GetComponent<AudioSource> ().isPlaying)
-				bg.GetComponent<AudioSource> ().Play ();
-			}
-		} else {
-			foreach (Transform bg in bgs) {
-				bg.GetComponent<AudioSource> ().Stop ();
-
-			}
-		}
+//		if (isMusicActivating) {
+//			foreach (Transform bg in bgs) {
+//				if(!bg.GetComponent<AudioSource> ().isPlaying)
+//				bg.GetComponent<AudioSource> ().Play ();
+//			}
+//		} else {
+//			foreach (Transform bg in bgs) {
+//				bg.GetComponent<AudioSource> ().Stop ();
+//
+//			}
+//		}
 		//print (isMusicActivating1);
+		isMusicActivating = AudioSet.isMusicOn;
+		isSoundActivating = AudioSet.isSoundOn;
 	}
 	public void OnStopButtonClick(){
 		if(isSoundActivating)
@@ -43,6 +45,7 @@ public class GameUIScript : MonoBehaviour {
 		stop.gameObject.SetActive (false);
 		//游戏暂停代码
 		Time.timeScale = 0;
+		//AudioSet.isMusicOn = false;
 	}
 
 	public void OnContinueButtonClick(){
@@ -52,7 +55,7 @@ public class GameUIScript : MonoBehaviour {
 		stop.gameObject.SetActive (true);
 		print ("游戏继续代码");
 		Time.timeScale = 1;
-
+		//AudioSet.isMusicOn = isMusicActivating;
 	}
 	public void OnBackButtonClick(){
 		if(isSoundActivating)
@@ -62,6 +65,7 @@ public class GameUIScript : MonoBehaviour {
 		print ("游戏后退代码");//后退代码
 		Application.LoadLevel ("StartMenu");
 		Time.timeScale = 1;
+		//AudioSet.isMusicOn = isMusicActivating;
 	}
 	public void OnRestartButtonClick(){
 		if(isSoundActivating)
@@ -72,6 +76,7 @@ public class GameUIScript : MonoBehaviour {
 		Application.LoadLevel ("Game");
 		//StartCoroutine (loadScene ("Game"));
 		Time.timeScale = 1;
+		//AudioSet.isMusicOn = isMusicActivating;
 	}
 
 	public void OnDiedBackButtonClick(){
@@ -79,6 +84,7 @@ public class GameUIScript : MonoBehaviour {
 		//回到菜单界面
 		StartCoroutine (loadScene ("StarMenu"));
 		Time.timeScale = 1;
+		//AudioSet.isMusicOn = isMusicActivating;
 	}
 	public void OnDiedContinueButtonClick(){
 		died.gameObject.SetActive (false);
@@ -86,6 +92,7 @@ public class GameUIScript : MonoBehaviour {
 		Application.LoadLevel ("Game");
 		//StartCoroutine (loadScene ("Game"));
 		Time.timeScale = 1;
+		//AudioSet.isMusicOn = isMusicActivating;
 	}
 	public void OnDiedFacebookButtonClick(){
 

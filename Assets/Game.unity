@@ -3910,7 +3910,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f145eae0d6b85874790cfe0b7c267a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFront: 0
+  bg: {fileID: 2006358354}
+  sub: {fileID: 0}
+  walk: {fileID: 1398379507}
 --- !u!1 &446277085
 GameObject:
   m_ObjectHideFlags: 0
@@ -10604,7 +10606,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f145eae0d6b85874790cfe0b7c267a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFront: 0
+  bg: {fileID: 1512589490}
+  sub: {fileID: 0}
+  walk: {fileID: 729061886}
 --- !u!1 &1025515059
 GameObject:
   m_ObjectHideFlags: 0
@@ -12716,6 +12720,7 @@ GameObject:
   - 224: {fileID: 1264287193}
   - 95: {fileID: 1264287194}
   - 114: {fileID: 1264287195}
+  - 82: {fileID: 1264287196}
   m_Layer: 5
   m_Name: Cowboy04
   m_TagString: Untagged
@@ -12791,6 +12796,75 @@ MonoBehaviour:
   normalMax: 65
   impatientMax: 90
   angryMax: 100
+--- !u!82 &1264287196
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1264287192}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 650f4d8d6b18df742b7b2c2b95c83ff7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1271721852
 GameObject:
   m_ObjectHideFlags: 0
@@ -13029,7 +13103,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f145eae0d6b85874790cfe0b7c267a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFront: 0
+  bg: {fileID: 384930580}
+  sub: {fileID: 215484321}
+  walk: {fileID: 1264287193}
 --- !u!1 &1308114827
 GameObject:
   m_ObjectHideFlags: 0
@@ -13231,6 +13307,8 @@ MonoBehaviour:
   stopAudio: {fileID: 8300000, guid: 327da6be5aaae2a4ba5a5b8597489a2e, type: 3}
   btnAudio: {fileID: 8300000, guid: d6b936e9736af3943b64ea5a24afe380, type: 3}
   restartAudio: {fileID: 8300000, guid: d72c96dc10ed7ba48a6dc347bf965827, type: 3}
+  isMusicActivating: 1
+  isSoundActivating: 1
   bgs:
   - {fileID: 233913233}
   - {fileID: 2006358354}
@@ -13957,7 +14035,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f145eae0d6b85874790cfe0b7c267a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFront: 0
+  bg: {fileID: 1978834579}
+  sub: {fileID: 0}
+  walk: {fileID: 1036040470}
 --- !u!1 &1435213080
 GameObject:
   m_ObjectHideFlags: 0
@@ -15743,7 +15823,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f145eae0d6b85874790cfe0b7c267a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFront: 0
+  bg: {fileID: 580213172}
+  sub: {fileID: 0}
+  walk: {fileID: 1670326436}
 --- !u!1 &1575947809
 GameObject:
   m_ObjectHideFlags: 0
@@ -15978,7 +16060,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f145eae0d6b85874790cfe0b7c267a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFront: 0
+  bg: {fileID: 233913233}
+  sub: {fileID: 705642988}
+  walk: {fileID: 298208903}
 --- !u!1 &1611683765
 GameObject:
   m_ObjectHideFlags: 0
