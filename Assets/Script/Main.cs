@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Main : MonoBehaviour {
 
@@ -9,18 +10,18 @@ public class Main : MonoBehaviour {
 	AsyncOperation async;
 	public bool b=false;
 	public AudioClip btnAudio;
-
+	bool firstTimeInit=false;
 	public Transform loading;
 	public Transform bg;
 	public Transform railing;
 	public Transform soundToggle;
 	public Transform musicToggle;
 	public Vector3 v3=new Vector3(0,0,0);
-	public bool isSoundActivating=AudioSet.isSoundOn;
-	public bool isMusicActivating=AudioSet.isMusicOn;
+	public bool isSoundActivating=(Game.soundSwitch==1);
+	public bool isMusicActivating=(Game.musicSwitch==1);
 
 	void Start(){
-		if (isMusicActivating) {
+		/*if (isMusicActivating) {
 			bg.GetComponent<AudioSource> ().Play ();
 		} else {
 			if(bg.GetComponent<AudioSource> ().isPlaying)
@@ -32,7 +33,30 @@ public class Main : MonoBehaviour {
 		} else {
 			if(railing.GetComponent<AudioSource> ().isPlaying)
 			railing.GetComponent<AudioSource> ().Stop ();
+		}*/
+		if (!Game.isGameInit ()) {
+			Game.Initialize();
 		}
+		if (Game.soundSwitch == 1) {
+			SoundToggle (false);
+			soundToggle.GetComponent<Toggle>().isOn=false;
+			railing.GetComponent<AudioSource> ().Play ();
+		} else {
+			SoundToggle (true);
+			soundToggle.GetComponent<Toggle>().isOn=true;
+			railing.GetComponent<AudioSource> ().Stop ();
+		}
+		if (Game.musicSwitch == 1) {
+			MusicToggle (false);
+			musicToggle.GetComponent<Toggle>().isOn=false;
+			bg.GetComponent<AudioSource> ().Play();
+		} else {
+
+			MusicToggle(true);
+			musicToggle.GetComponent<Toggle>().isOn=true;
+			bg.GetComponent<AudioSource> ().Stop();
+		}
+		firstTimeInit = true;
 	}
 
 	public void OnSettingBtnClick(Transform a){
@@ -40,7 +64,7 @@ public class Main : MonoBehaviour {
 
 		Vector3 vec =((RectTransform)a.transform).anchoredPosition3D;
 		if (!b) { 
-			if(isSoundActivating)
+			if(Game.soundSwitch==1)
 				AudioSource.PlayClipAtPoint (btnAudio, v3);
 			vec.x += 150f;
 			print (vec);
@@ -66,15 +90,15 @@ public class Main : MonoBehaviour {
 	public void OnSettingBtnCloseClick(Transform a){
 
 		if (b) {
-			Vector3 vec = a.transform.position;
-			vec.x -= 68f;
+			Vector3 vec =((RectTransform)a.transform).anchoredPosition3D;
+			vec.x -= 150f;
 			print (vec);
-			LeanTween.move (a.gameObject, vec, 0.1f);
+			LeanTween.move ((RectTransform)a.transform, vec, 0.1f);
 			b=false;
 		}
 	}
 	public void PlayGame(){
-		if(isSoundActivating)
+		if(Game.soundSwitch==1)
 			AudioSource.PlayClipAtPoint (btnAudio, v3);
 		print ("开始游戏");
 		loading.gameObject.SetActive (true);
@@ -83,48 +107,56 @@ public class Main : MonoBehaviour {
 
 	}
 	public void ShowGameCenter(){
-		if(isSoundActivating)
+		if(Game.soundSwitch==1)
 			AudioSource.PlayClipAtPoint (btnAudio, v3);
 		print ("打开游戏中心");
 	}
 
 	public void SoundToggle(bool isOff){
-		if(isSoundActivating)
+		if(Game.soundSwitch==1 && firstTimeInit)
 			AudioSource.PlayClipAtPoint (btnAudio, v3);
-		print (isOff);
+
 		if (isOff) {
-			AudioSet.isSoundOn=false;
+			//AudioSet.isSoundOn=false;
+			Game.soundSwitch=0;
 
 			isSoundActivating=false;
 			railing.GetComponent<AudioSource> ().Stop ();
 		} else {
-			AudioSet.isSoundOn=true;
+			//AudioSet.isSoundOn=true;
+			Game.soundSwitch=1;
 
 			isSoundActivating=true;
 			railing.GetComponent<AudioSource> ().Play ();
 		}
+		PlayerPrefs.SetInt ("SoundSwitch", Game.soundSwitch);
+		print (Game.soundSwitch);
 	}
 	public void MusicToggle(bool isOff){
-		if(isSoundActivating)
+		if(Game.soundSwitch==1 && firstTimeInit)
 			AudioSource.PlayClipAtPoint (btnAudio, v3);
-		print (isOff);
+
 		if (isOff) {
-			AudioSet.isMusicOn= false;
-			//GameUIScript.isMusicActivating = false;
+			//AudioSet.isMusicOn= false;
+			Game.musicSwitch=0;
+
 			isMusicActivating = false;
 			bg.GetComponent<AudioSource> ().Stop ();
 
 		} else {
-			AudioSet.isMusicOn= true;
-			//GameUIScript.isMusicActivating =true;
+			//AudioSet.isMusicOn= true;
+			Game.musicSwitch=1;
+
 			isMusicActivating =true;
 			bg.GetComponent<AudioSource> ().Play ();
 
 		}
+		PlayerPrefs.SetInt ("MusicSwitch", Game.musicSwitch);
+		print (Game.musicSwitch);
 
 	}
 	public void DeleteAdvert(){
-		if(isSoundActivating)
+		if(Game.soundSwitch==1)
 			AudioSource.PlayClipAtPoint (btnAudio, v3);
 		print ("DeleteAdvert");
 	}

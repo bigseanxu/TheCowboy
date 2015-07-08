@@ -35,11 +35,14 @@ public class GameUIScript : MonoBehaviour {
 //			}
 //		}
 		//print (isMusicActivating1);
-		isMusicActivating = AudioSet.isMusicOn;
-		isSoundActivating = AudioSet.isSoundOn;
+		if (!Game.isGameInit ()) {
+			Game.Initialize();
+		}
+		isMusicActivating = Game.musicSwitch==1 ;
+		isSoundActivating = Game.soundSwitch==1 ;
 	}
 	public void OnStopButtonClick(){
-		if(isSoundActivating)
+		if(Game.soundSwitch==1 )
 		AudioSource.PlayClipAtPoint (stopAudio, v3);
 		pause.gameObject.SetActive (true);
 		stop.gameObject.SetActive (false);
@@ -49,7 +52,7 @@ public class GameUIScript : MonoBehaviour {
 	}
 
 	public void OnContinueButtonClick(){
-		if(isSoundActivating)
+		if(Game.soundSwitch==1 )
 		AudioSource.PlayClipAtPoint (btnAudio, v3);
 		pause.gameObject.SetActive (false);
 		stop.gameObject.SetActive (true);
@@ -58,7 +61,7 @@ public class GameUIScript : MonoBehaviour {
 		//AudioSet.isMusicOn = isMusicActivating;
 	}
 	public void OnBackButtonClick(){
-		if(isSoundActivating)
+		if(Game.soundSwitch==1)
 		AudioSource.PlayClipAtPoint (btnAudio, v3);
 		pause.gameObject.SetActive (false);
 		stop.gameObject.SetActive (true);
@@ -68,7 +71,7 @@ public class GameUIScript : MonoBehaviour {
 		//AudioSet.isMusicOn = isMusicActivating;
 	}
 	public void OnRestartButtonClick(){
-		if(isSoundActivating)
+		if(Game.soundSwitch==1 )
 		AudioSource.PlayClipAtPoint (restartAudio, v3);
 		pause.gameObject.SetActive (false);
 		stop.gameObject.SetActive (true);

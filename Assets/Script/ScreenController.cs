@@ -11,13 +11,15 @@ public class ScreenController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+		print (Game.musicSwitch);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		//print (AudioSet.isMusicOn);
-		//Game.GameScreens screen = mCubeIndicator.GetComponent<CubeIndicator> ().GetScreenAfterRotate (Game.CubeFaces.FaceB);
-		if (AudioSet.isMusicOn) {
+
+		print (Game.musicSwitch);
+
+		if (Game.musicSwitch==1) {
 				
 			bg.GetComponent<AudioSource> ().enabled=true;
 			bg.GetComponent<AudioSource> ().volume=1;
@@ -28,7 +30,7 @@ public class ScreenController : MonoBehaviour {
 
 		}
 
-		if (AudioSet.isSoundOn ) {
+		if (Game.soundSwitch==1 ) {
 
 			if(sub!=null){
 				sub.GetComponent<AudioSource> ().enabled = true;
