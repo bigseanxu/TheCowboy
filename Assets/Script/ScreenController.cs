@@ -9,16 +9,15 @@ public class ScreenController : MonoBehaviour {
 	public Transform walk;
 	//public bool isMusicOn=AudioSet.isMusicOn;
 	// Use this for initialization
+	bool isActive = false;
+	public Transform cowboy;
 	void Start () {
 
-		print (Game.musicSwitch);
+//		print (Game.musicSwitch);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-		print (Game.musicSwitch);
-
 		if (Game.musicSwitch==1) {
 				
 			bg.GetComponent<AudioSource> ().enabled=true;
@@ -48,6 +47,9 @@ public class ScreenController : MonoBehaviour {
 		}
 	}
 
-
+	public void SetActive(bool active) {
+		isActive = active;
+		cowboy.GetComponent<CowboyState> ().SetActive (active);
+	}
 
 }

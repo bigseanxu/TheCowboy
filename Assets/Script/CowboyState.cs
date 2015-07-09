@@ -11,19 +11,23 @@ public class CowboyState : MonoBehaviour {
 	 * 5=开枪             100%
 	 * 11=烟头掉下来      11%-50%
 	 */
-	public int stateNum=1;
+	int stateNum = 1;
+	
 	public Transform cowboy;
 	public Transform died;
-	public float angryNum=0f;////此项可以直接赋值
-	public bool isActive=false;//此项可调
-	public bool isScreen06=false;//此项固定
-	public bool isScreen01=false;//此项固定
+
+	public bool isScreen06 = false;//此项固定
+	public bool isScreen01 = false;//此项固定
 	public string cowboyAniNum="01";//此处必须填写01到06,不能省略数字0.
-	//以下为可调项
-	public float addAngryNumWhenUpdate=0.1f;
-	public float minusAngryNumWhenUpdate=0.04f;
-	public float diedMenuShowDelay=1.8f;
-	public float animationSpeed=0.5f;
+
+	float angryNum = 0f;
+
+	//以下为可调项, 游戏逻辑相关
+	public float mAngryPointIncrementPerSec = 10f;
+	public float mAngryPointDiscrementPerSec = 8f;
+	public float mFirstTimeIncrement = 20f;
+	public float mStartAngryPoint = 0;
+
 	public float relaxMin=0;
 	public float relaxMax=30;
 	public float drop=38;
@@ -31,18 +35,28 @@ public class CowboyState : MonoBehaviour {
 	public float impatientMax=90;
 	public float angryMax=100;
 
-	void Start() {
+	// 非游戏逻辑
+	public float diedMenuShowDelay=1.8f;
+	public float animationSpeed=0.5f;
 
+
+
+	bool isActive = false;//此项可调
+
+	void Start() {
+		angryNum = mStartAngryPoint;
 	}
 
 	void Update () {
 		Animator ani=cowboy.GetComponent<Animator>();
 		ani.speed = animationSpeed;
+
 		if (isActive) {
-			angryNum += addAngryNumWhenUpdate;
+			angryNum += mAngryPointIncrementPerSec * Time.deltaTime;
 		} else {
-			angryNum -= minusAngryNumWhenUpdate;
+			angryNum -= mAngryPointDiscrementPerSec * Time.deltaTime;
 		}
+
 		AngryStateMapping ();
 		//print (angryNum);
 		if (stateNum == 1) {
@@ -56,6 +70,7 @@ public class CowboyState : MonoBehaviour {
 			ani.Play("fightAngry"+cowboyAniNum);
 		} else if (stateNum == 5) {
 			ani.Play("Fire"+cowboyAniNum);
+			Game.state = 2;
 			Invoke("WhenDied",diedMenuShowDelay);
 			
 		} else if (stateNum == 11) {
@@ -63,6 +78,7 @@ public class CowboyState : MonoBehaviour {
 			ani.Play("drop");
 		}
 	}
+
 	void AngryStateMapping(){
 		if (angryNum < relaxMin) {
 			angryNum=relaxMin;
@@ -88,9 +104,24 @@ public class CowboyState : MonoBehaviour {
 			stateNum = 5;
 		}
 	}
+
 	void WhenDied(){
+
 		died.gameObject.SetActive(true);
 		Animator die=died.GetComponent<Animator>();
 		die.Play("died");
+	}
+
+	Transform GetParentScreen() {
+		return transform.parent;
+	}
+
+	public void SetActive(bool active) {
+		if (active != isActive) {
+			isActive = active;
+			if (isActive) {
+				angryNum += mFirstTimeIncrement;
+			}
+		}
 	}
 }

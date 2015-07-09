@@ -2,14 +2,15 @@
 using System.Collections;
 
 public class GestureListener : MonoBehaviour {
-	public Transform[] things = new Transform[6];
+	public Transform[] screens = new Transform[6];
 	Movement[] movs;
 	public Transform cube;
 	public Transform mCanvas;
 	public Transform cloud;
 	// Use this for initialization
 	void Start () {
-	
+		// game start
+		Game.state = 1;
 	}
 	
 	// Update is called once per frame
@@ -18,6 +19,10 @@ public class GestureListener : MonoBehaviour {
 	}
 
 	void OnSwipe(SwipeGesture gesture) {
+		if (Game.state != 1) {
+			return;
+		}
+
 		if (cube.GetComponent<CubeContoller> ().IsRotating ()) {
 			return;
 		}
@@ -40,7 +45,7 @@ public class GestureListener : MonoBehaviour {
 
 	}
 
-	//void OnTap(TapGesture gesture) {
-	//	cloud.GetComponent<Movement> ().des.toggle = !cloud.GetComponent<Movement> ().des.toggle;
-	//}
+	void OnTap(TapGesture gesture) {
+		screens [0].SetSiblingIndex (5);
+	}
 }

@@ -30,6 +30,10 @@ public static class Game
 	public static int currScore = 0;
 	static bool isInit = false;
 
+	public static int state = 0; // 0: not in game
+								 // 1: in game
+								 // 2: died
+
 	public static void Initialize() {
 		LoadPrefs ();
 		isInit = true;

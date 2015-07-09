@@ -1868,7 +1868,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 298208902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: .100000001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1437002869}
@@ -1915,12 +1915,12 @@ MonoBehaviour:
   cowboy: {fileID: 298208903}
   died: {fileID: 1906823560}
   angryNum: 0
-  isActive: 0
   isScreen06: 0
   isScreen01: 1
   cowboyAniNum: 01
-  addAngryNumWhenUpdate: .100000001
-  minusAngryNumWhenUpdate: .0399999991
+  mAngryPointIncrementPerSec: 10
+  mAngryPointDiscrementPerSec: 8
+  mFirstTimeIncrement: 20
   diedMenuShowDelay: 1.79999995
   animationSpeed: .5
   relaxMin: 0
@@ -3879,7 +3879,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &440016259
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3913,6 +3913,7 @@ MonoBehaviour:
   bg: {fileID: 2006358354}
   sub: {fileID: 0}
   walk: {fileID: 1398379507}
+  cowboy: {fileID: 1398379507}
 --- !u!1 &446277085
 GameObject:
   m_ObjectHideFlags: 0
@@ -8310,12 +8311,12 @@ MonoBehaviour:
   cowboy: {fileID: 729061886}
   died: {fileID: 1906823560}
   angryNum: 0
-  isActive: 0
   isScreen06: 0
   isScreen01: 0
   cowboyAniNum: 05
-  addAngryNumWhenUpdate: .100000001
-  minusAngryNumWhenUpdate: .0399999991
+  mAngryPointIncrementPerSec: 10
+  mAngryPointDiscrementPerSec: 8
+  mFirstTimeIncrement: 20
   diedMenuShowDelay: 1.79999995
   animationSpeed: .5
   relaxMin: 0
@@ -10570,7 +10571,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1024085037
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10609,6 +10610,7 @@ MonoBehaviour:
   bg: {fileID: 1512589490}
   sub: {fileID: 0}
   walk: {fileID: 729061886}
+  cowboy: {fileID: 729061886}
 --- !u!1 &1025515059
 GameObject:
   m_ObjectHideFlags: 0
@@ -10802,12 +10804,12 @@ MonoBehaviour:
   cowboy: {fileID: 1036040470}
   died: {fileID: 1906823560}
   angryNum: 0
-  isActive: 0
   isScreen06: 1
   isScreen01: 0
   cowboyAniNum: 06
-  addAngryNumWhenUpdate: .100000001
-  minusAngryNumWhenUpdate: .0399999991
+  mAngryPointIncrementPerSec: 10
+  mAngryPointDiscrementPerSec: 8
+  mFirstTimeIncrement: 20
   diedMenuShowDelay: 1.79999995
   animationSpeed: .5
   relaxMin: 0
@@ -12447,7 +12449,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1201312339
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12782,12 +12784,12 @@ MonoBehaviour:
   cowboy: {fileID: 1264287193}
   died: {fileID: 1906823560}
   angryNum: 0
-  isActive: 0
   isScreen06: 0
   isScreen01: 0
   cowboyAniNum: 04
-  addAngryNumWhenUpdate: .100000001
-  minusAngryNumWhenUpdate: .0399999991
+  mAngryPointIncrementPerSec: 10
+  mAngryPointDiscrementPerSec: 8
+  mFirstTimeIncrement: 20
   diedMenuShowDelay: 1.79999995
   animationSpeed: .5
   relaxMin: 0
@@ -13072,7 +13074,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1302086157
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13106,6 +13108,7 @@ MonoBehaviour:
   bg: {fileID: 384930580}
   sub: {fileID: 215484321}
   walk: {fileID: 1264287193}
+  cowboy: {fileID: 1264287193}
 --- !u!1 &1308114827
 GameObject:
   m_ObjectHideFlags: 0
@@ -13553,7 +13556,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1396834746
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13697,12 +13700,12 @@ MonoBehaviour:
   cowboy: {fileID: 1398379507}
   died: {fileID: 1906823560}
   angryNum: 0
-  isActive: 0
   isScreen06: 0
   isScreen01: 0
   cowboyAniNum: 02
-  addAngryNumWhenUpdate: .100000001
-  minusAngryNumWhenUpdate: .0399999991
+  mAngryPointIncrementPerSec: 10
+  mAngryPointDiscrementPerSec: 8
+  mFirstTimeIncrement: 20
   diedMenuShowDelay: 1.79999995
   animationSpeed: .5
   relaxMin: 0
@@ -14004,7 +14007,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1417717821
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14038,6 +14041,7 @@ MonoBehaviour:
   bg: {fileID: 1978834579}
   sub: {fileID: 0}
   walk: {fileID: 1036040470}
+  cowboy: {fileID: 1036040470}
 --- !u!1 &1435213080
 GameObject:
   m_ObjectHideFlags: 0
@@ -14212,7 +14216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1487321881
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15724,8 +15728,9 @@ GameObject:
   m_Component:
   - 224: {fileID: 1557146325}
   - 114: {fileID: 1557146326}
+  - 114: {fileID: 1557146327}
   m_Layer: 5
-  m_Name: Const
+  m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15777,6 +15782,17 @@ MonoBehaviour:
   spriteWidth: 240
   spriteHeight: 340
   defaultY: -85
+--- !u!114 &1557146327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1557146324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f991c1b49fb0c84eb516c2695351d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1557707627
 GameObject:
   m_ObjectHideFlags: 0
@@ -15792,7 +15808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1557707628
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15826,6 +15842,7 @@ MonoBehaviour:
   bg: {fileID: 580213172}
   sub: {fileID: 0}
   walk: {fileID: 1670326436}
+  cowboy: {fileID: 1670326436}
 --- !u!1 &1575947809
 GameObject:
   m_ObjectHideFlags: 0
@@ -16063,6 +16080,7 @@ MonoBehaviour:
   bg: {fileID: 233913233}
   sub: {fileID: 705642988}
   walk: {fileID: 298208903}
+  cowboy: {fileID: 298208903}
 --- !u!1 &1611683765
 GameObject:
   m_ObjectHideFlags: 0
@@ -17688,13 +17706,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e99572965d301fe4ba11abf950f74ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  things:
+  screens:
   - {fileID: 1590120031}
-  - {fileID: 440016259}
-  - {fileID: 1557707628}
-  - {fileID: 1302086157}
-  - {fileID: 1024085037}
-  - {fileID: 1417717821}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   cube: {fileID: 810086257}
   mCanvas: {fileID: 95467232}
   cloud: {fileID: 1396834746}
@@ -18037,12 +18055,12 @@ MonoBehaviour:
   cowboy: {fileID: 1670326436}
   died: {fileID: 1906823560}
   angryNum: 0
-  isActive: 0
   isScreen06: 0
   isScreen01: 0
   cowboyAniNum: 03
-  addAngryNumWhenUpdate: .100000001
-  minusAngryNumWhenUpdate: .0399999991
+  mAngryPointIncrementPerSec: 10
+  mAngryPointDiscrementPerSec: 8
+  mFirstTimeIncrement: 20
   diedMenuShowDelay: 1.79999995
   animationSpeed: .5
   relaxMin: 0
@@ -20790,7 +20808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2143908990
 RectTransform:
   m_ObjectHideFlags: 0

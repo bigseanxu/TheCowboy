@@ -31,6 +31,8 @@ public class CubeContoller : MonoBehaviour {
 	public Transform[] mCowboys = new Transform[6];
 	// Use this for initialization
 	void Start () {
+
+
 		float aspect = Screen.width / mScreenRect.x;
 		mActualCowboyRect.x = aspect * mCowboyRect.x;
 		mActualCowboyRect.y = aspect * mCowboyRect.y;
@@ -53,6 +55,8 @@ public class CubeContoller : MonoBehaviour {
 		faces [3] = transform.FindChild ("FaceU");
 		faces [4] = transform.FindChild ("FaceD");
 		faces [5] = transform.FindChild ("FaceF");
+
+		faces [0].transform.SetSiblingIndex(6);
 
 		OnTweenComplete ();
 		isOn = Game.musicSwitch ;
@@ -105,38 +109,28 @@ public class CubeContoller : MonoBehaviour {
 	}
 
 	void OnTweenComplete() {
+		Game.currScore += 1;
 		//Game.musicSwitch=isOn;
 		isRotating = false;
 	//	CheckRotate();
 		transform.rotation = new Quaternion ();
 		RepackTheCube ();
 		ShowCowboys ();
-//		 LeanTween ();
-//		l.t
+		//HideInactiveScreens()
 		gameObject.SetActive (false);
+	}
+		//faces [(int)Game.CubeFaces.FaceB].GetComponent<MeshRenderer> ().material.mainTexture = null;
+
+	void HideInactiveScreens() {
 		Game.GameScreens screen = mCubeIndicator.GetComponent<CubeIndicator> ().GetScreenAfterRotate (Game.CubeFaces.FaceB);
 		for (int i = 0; i < 6; i++) {
 			if ((int)screen == i) {
 				things [i].gameObject.SetActive (true);
-				//things[i].GetComponentInChildren<AudioSource>().volume=0.8f;
-				//Movement[] movs=things[i].GetComponentsInChildren<Movement>();
-				//foreach(Movement mov in movs){
-				//	mov.StartTween();
-				//}
 			} else {
 				things [i].gameObject.SetActive (false);
-				//Movement[] movs=things[i].GetComponentsInChildren<Movement>();
-				//foreach(Movement mov in movs){
-				//	mov.StopTween();
-				//}
-			
-				//CheckRotate();
 			}
-			//things[i].GetComponent<ScreenController>().SetAsFront(false);
 		}
-
 	}
-		//faces [(int)Game.CubeFaces.FaceB].GetComponent<MeshRenderer> ().material.mainTexture = null;
 
 
 	public bool IsRotating() {

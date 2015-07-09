@@ -1,18 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GameEntrance : MonoBehaviour {
+public class NewBehaviourScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if (!Game.isGameInit ()) {
-			Game.Initialize();
-		}
-		Game.musicSwitch = 1;
+	
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		GetComponent<ShowNumberInCanvas> ().numberInsp = Game.bestScore;
 	}
 }

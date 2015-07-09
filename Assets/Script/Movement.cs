@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Movement : MonoBehaviour {
 
@@ -21,6 +22,8 @@ public class Movement : MonoBehaviour {
 	bool isfirsttime=true;
 	Vector3 vec;
 	Vector3 vec2;
+
+	float screenWidth = 1080;
 	//public bool isLoop=true;
 	void Start () {
 		Invoke("StartTween", waitingTime);
@@ -71,13 +74,24 @@ public class Movement : MonoBehaviour {
 		((RectTransform)transform).anchoredPosition3D = vec;
 		TweenOnComplete ();
 	}
+
 	public IEnumerator Test(){
 		yield return new WaitForSeconds(waitingTime);//等待x秒
 
 	}
 
-
-
-
-
+	void Update() {
+		RectTransform rt = (RectTransform)transform;
+		float alpha = 1;
+		if (rt.anchoredPosition.x + rt.rect.width / 2.0f < - screenWidth / 2.0f) {
+			alpha = 0;
+		} else if (rt.anchoredPosition.x - rt.rect.width / 2.0f > screenWidth / 2.0f) {
+			alpha = 0;
+		} else if (rt.anchoredPosition.x - rt.rect.width / 2.0f < - screenWidth / 2.0f) {
+			alpha = 1.0f - ((- screenWidth / 2.0f + rt.rect.width / 2.0f - rt.anchoredPosition.x) / rt.rect.width);
+		} else if (rt.anchoredPosition.x + rt.rect.width / 2.0f > screenWidth / 2.0f) {
+			alpha = (screenWidth / 2.0f + rt.rect.width / 2.0f - rt.anchoredPosition.x) / rt.rect.width;
+		}
+		GetComponent<Image> ().color = new Color (1, 1, 1, alpha);
+	}
 }
